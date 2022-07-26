@@ -23,6 +23,7 @@ const Main = () => {
 						puzzles for fellow creative minds at escape room companies!
 					</p>
 					<div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+						{/* LinkedIn */}
 						<a
 							href="https://www.linkedin.com/in/elikeith404/"
 							target="_blank"
@@ -32,6 +33,7 @@ const Main = () => {
 								<FaLinkedinIn />
 							</div>
 						</a>
+						{/* Github */}
 						<a
 							href="https://github.com/EliKeith404"
 							target="_blank"
@@ -41,9 +43,11 @@ const Main = () => {
 								<FaGithub />
 							</div>
 						</a>
+						{/* Email */}
 						<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
 							<AiOutlineMail />
 						</div>
+						{/* Resume */}
 						<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
 							<BsFillPersonLinesFill />
 						</div>
