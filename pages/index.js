@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Skills from '../components/Skills';
 
 export default function Home() {
-	const baseImagePath = '/../public/assets/skills';
+	const baseImagePath = '/assets/skills';
 	const [skills, setSkills] = useState([
 		/* Multiple of 4 for styling */
 		{ name: 'HTML', src: `${baseImagePath}/html-logo.png` },
