@@ -1,8 +1,18 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
-const Skills = (props) => {
-	const skills = props.skills;
+const Skills = ({ imagePath }) => {
+	const [skills, setSkills] = useState([
+		/* Multiple of 4 for styling */
+		{ name: 'HTML', src: `${imagePath}/skills/html-logo.png` },
+		{ name: 'CSS', src: `${imagePath}/skills/css-logo.png` },
+		{ name: 'Javascript', src: `${imagePath}/skills/js-logo.png` },
+		{ name: 'Node.js', src: `${imagePath}/skills/node-logo.png` },
+		{ name: 'Express', src: `${imagePath}/skills/express-logo.png` },
+		{ name: 'React', src: `${imagePath}/skills/react-logo.png` },
+		{ name: 'Next.js', src: `${imagePath}/skills/next-logo.png` },
+		{ name: 'MongoDB', src: `${imagePath}/skills/mongo-logo.png` },
+	]);
 
 	return (
 		<div className="w-full lg:h-screen p-2">
