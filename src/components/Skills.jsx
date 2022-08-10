@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const Skills = ({ imagePath }) => {
+const Skills = () => {
+	const skillsPath = '/assets/skills';
 	const [skills, setSkills] = useState([
 		/* Multiple of 4 for styling */
-		{ name: 'HTML', src: `${imagePath}/skills/html-logo.png` },
-		{ name: 'CSS', src: `${imagePath}/skills/css-logo.png` },
-		{ name: 'Javascript', src: `${imagePath}/skills/js-logo.png` },
-		{ name: 'Node.js', src: `${imagePath}/skills/node-logo.png` },
-		{ name: 'Express', src: `${imagePath}/skills/express-logo.png` },
-		{ name: 'React', src: `${imagePath}/skills/react-logo.png` },
-		{ name: 'Next.js', src: `${imagePath}/skills/next-logo.png` },
-		{ name: 'MongoDB', src: `${imagePath}/skills/mongo-logo.png` },
+		{ name: 'HTML', src: `${skillsPath}/html-logo.png` },
+		{ name: 'CSS', src: `${skillsPath}/css-logo.png` },
+		{ name: 'Javascript', src: `${skillsPath}/js-logo.png` },
+		{ name: 'Node.js', src: `${skillsPath}/node-logo.png` },
+		{ name: 'Express', src: `${skillsPath}/express-logo.png` },
+		{ name: 'React', src: `${skillsPath}/react-logo.png` },
+		{ name: 'Next.js', src: `${skillsPath}/next-logo.png` },
+		{ name: 'MongoDB', src: `${skillsPath}/mongo-logo.png` },
 	]);
 
 	return (

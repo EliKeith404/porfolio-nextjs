@@ -4,7 +4,7 @@ import ProjectItem from './ProjectItem';
 import MybraryImg from '../../public/assets/projects/mybrary.png';
 import GlobalDomImg from '../../public/assets/projects/globaldom.png';
 
-const Projects = ({ imagePath }) => {
+const Projects = () => {
 	return (
 		<div id="projects" className="w-full lg:h-screen p-2">
 			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">

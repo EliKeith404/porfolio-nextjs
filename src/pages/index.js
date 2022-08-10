@@ -19,8 +19,8 @@ export default function Home() {
 			<Navbar />
 			<Main />
 			<About />
-			<Skills imagePath={baseImagePath} />
-			<Projects imagePath={baseImagePath} />
+			<Skills />
+			<Projects />
 			<Contact />
 		</>
 	);

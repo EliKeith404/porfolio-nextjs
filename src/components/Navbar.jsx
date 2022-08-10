@@ -14,14 +14,14 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
-		const handleShadow = () => {
+		const handleNavShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true);
 			} else {
 				setShadow(false);
 			}
 		};
-		window.addEventListener('scroll', handleShadow);
+		window.addEventListener('scroll', handleNavShadow);
 	}, []);
 
 	return (
@@ -33,7 +33,7 @@ const Navbar = () => {
 			}
 		>
 			<div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-				<Link href="/#home">
+				<Link href="/">
 					<Image
 						className="cursor-pointer"
 						src=""
@@ -42,31 +42,41 @@ const Navbar = () => {
 						height="50"
 					/>
 				</Link>
-				<div>
-					<ul className="hidden md:flex pr-4">
+				<div className="flex items-center h-full">
+					<ul className="hidden md:flex items-center h-full">
 						<Link href="/">
-							<li className="ml-10 text-sm uppercase border-b-[3px] border-transparent hover:border-[#5451e5]">
-								Home
+							<li className="group h-full flex items-center">
+								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+									Home
+								</span>
 							</li>
 						</Link>
 						<Link href="/#about">
-							<li className="ml-10 text-sm uppercase border-b-[3px] border-transparent hover:border-[#5451e5]">
-								About
+							<li className="group h-full flex items-center">
+								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+									About
+								</span>
 							</li>
 						</Link>
 						<Link href="/#skills">
-							<li className="ml-10 text-sm uppercase border-b-[3px] border-transparent hover:border-[#5451e5]">
-								Skills
+							<li className="group h-full flex items-center">
+								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+									Skills
+								</span>
 							</li>
 						</Link>
 						<Link href="/#projects">
-							<li className="ml-10 text-sm uppercase border-b-[3px] border-transparent hover:border-[#5451e5]">
-								Projects
+							<li className="group h-full flex items-center">
+								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+									Projects
+								</span>
 							</li>
 						</Link>
 						<Link href="/#contact">
-							<li className="ml-10 text-sm uppercase border-b-[3px] border-transparent hover:border-[#5451e5]">
-								Contact
+							<li className="group h-full flex items-center">
+								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+									Contact
+								</span>
 							</li>
 						</Link>
 					</ul>
@@ -85,7 +95,7 @@ const Navbar = () => {
 					className={
 						nav
 							? 'fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-							: 'fixed right-[-100%] top-0 p-10 ease-in duration-500'
+							: 'fixed right-[-100%] h-screen top-0 p-10 ease-in duration-500'
 					}
 				>
 					<div>
