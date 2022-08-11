@@ -7,7 +7,7 @@ import ConnectBtns from './ConnectBtns';
 
 const Contact = () => {
 	return (
-		<div id="contact" className="w-full lg:h-screen">
+		<div id="contact" className="w-full lg:h-screen p-2 lg:pt-[30rem]">
 			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
 				<p className="text-xl tracking-widest uppercase text-[#5651e5]">
 					Contact
