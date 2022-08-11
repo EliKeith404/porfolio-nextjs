@@ -2,10 +2,11 @@ import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import ConnectBtns from './ConnectBtns';
 
 const Main = () => {
 	return (
-		<div className="w-full h-screen text-center">
+		<div id="home" className="w-full h-screen text-center">
 			<div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
 				<div>
 					<p className="uppercase text-sm tracking-widest text-gray-600">
@@ -22,36 +23,7 @@ const Main = () => {
 						React, MongoDB, C#, and more. Currently designing and developing
 						puzzles for fellow creative minds at escape room companies!
 					</p>
-					<div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-						{/* LinkedIn */}
-						<a
-							href="https://www.linkedin.com/in/elikeith404/"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-								<FaLinkedinIn />
-							</div>
-						</a>
-						{/* Github */}
-						<a
-							href="https://github.com/EliKeith404"
-							target="_blank"
-							rel="noreferrer"
-						>
-							<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-								<FaGithub />
-							</div>
-						</a>
-						{/* Email */}
-						<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-							<AiOutlineMail />
-						</div>
-						{/* Resume */}
-						<div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-							<BsFillPersonLinesFill />
-						</div>
-					</div>
+					<ConnectBtns size="p-6" />
 				</div>
 			</div>
 		</div>

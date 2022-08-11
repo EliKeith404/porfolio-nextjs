@@ -6,8 +6,8 @@ import GlobalDomImg from '../../public/assets/projects/globaldom.png';
 
 const Projects = ({ imagePath }) => {
 	return (
-		<div className="w-full">
-			<div className="max-w-[1240px] mx-auto px-2 py-16">
+		<div id="projects" className="w-full lg:h-screen p-2">
+			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
 				<p className="text-xl tracking-widest uppercase text-[#5651e5]">
 					Projects
 				</p>
