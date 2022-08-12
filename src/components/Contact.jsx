@@ -7,7 +7,7 @@ import ConnectBtns from './ConnectBtns';
 
 const Contact = () => {
 	return (
-		<div id="contact" className="w-full lg:h-screen p-2 lg:pt-[30rem]">
+		<section id="contact" className="w-full md:h-screen p-2 md:pt-[30rem]">
 			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
 				<p className="text-xl tracking-widest uppercase text-[#5651e5]">
 					Contact
@@ -22,15 +22,17 @@ const Contact = () => {
 									className="rounded-xl hover:scale-105 ease-in duration-300"
 									src="/assets/workstation.jpg"
 									alt="/"
-									width="500"
-									height="500"
+									width="6000"
+									height="4000"
 								/>
 							</div>
 							<div>
 								<h3 className="text-[30px] py-2">Eli-Keith Bass</h3>
 								<p>Fullstack Developer</p>
 								<p className="py-4">
-									I am available for freelance or full-time positions.
+									I am available for freelance or full-time positions. Please
+									fill out the form or reach out on LinkedIn if you&apos;d like
+									to get in touch!
 								</p>
 							</div>
 							<div>
@@ -112,16 +114,16 @@ const Contact = () => {
 				</div>
 				<div className="flex justify-center items-center flex-col py-12">
 					<Link href="/#home">
-						<div className="p-4 rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300">
+						<div className="p-4 bg-[#ecf0f3] rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300">
 							<HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
 						</div>
 					</Link>
 					<div>
-						<p className="uppercase mt-2">Back to top</p>
+						<p className="uppercase mt-2 text-sm text-gray-600">Back to top</p>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

@@ -25,24 +25,33 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav
+		<div
 			className={
 				shadow
-					? 'fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]'
+					? 'fixed w-full h-20 z-[100] bg-[#ecf0f3] shadow-xl'
 					: 'fixed w-full h-20 z-[100] bg-[#ecf0f3]'
 			}
 		>
-			<div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-				<Link href="/">
-					<Image
-						className="cursor-pointer"
-						src=""
-						alt="Eli's Logo"
-						width="125"
-						height="50"
-					/>
-				</Link>
-				<div className="flex items-center h-full">
+			{/* Desktop Nav */}
+			<header
+				className={
+					nav
+						? 'hidden'
+						: 'flex justify-between items-center w-full h-full px-2 2xl:px-16'
+				}
+			>
+				<div className="px-5">
+					<Link href="/">
+						<Image
+							className="cursor-pointer"
+							src="/assets/ek-logo.png"
+							alt="Eli's Logo"
+							width="64"
+							height="64"
+						/>
+					</Link>
+				</div>
+				<nav className="flex items-center h-full">
 					<ul className="hidden md:flex items-center h-full">
 						<Link href="/">
 							<li className="group h-full flex items-center">
@@ -83,15 +92,15 @@ const Navbar = () => {
 					<div onClick={handleNav} className="md:hidden pr-4">
 						<AiOutlineMenu size={25} />
 					</div>
-				</div>
-			</div>
-
+				</nav>
+			</header>
+			{/* Mobile Nav Menu */}
 			<div
 				className={
 					nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
 				}
 			>
-				<div
+				<header
 					className={
 						nav
 							? 'fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
@@ -100,7 +109,12 @@ const Navbar = () => {
 				>
 					<div>
 						<div className="flex w-full items-center justify-between">
-							<Image src="" alt="Eli's Logo" width="87" height="35" />
+							<Image
+								src="/assets/ek-logo.png"
+								alt="Eli's Logo"
+								width="64"
+								height="64"
+							/>
 							<div
 								onClick={handleNav}
 								className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -112,7 +126,7 @@ const Navbar = () => {
 							<p className="w-[85%] md:w-[90%] py-4">Hello</p>
 						</div>
 					</div>
-					<div>
+					<nav>
 						<ul className="uppercase">
 							<Link href="/">
 								<li className="py-4 text-sm" onClick={handleNav}>
@@ -146,10 +160,10 @@ const Navbar = () => {
 							</p>
 							<ConnectBtns size="p-3" />
 						</div>
-					</div>
-				</div>
+					</nav>
+				</header>
 			</div>
-		</nav>
+		</div>
 	);
 };
 
