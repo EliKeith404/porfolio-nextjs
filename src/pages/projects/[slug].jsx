@@ -60,8 +60,8 @@ const mybrary = ({ project }) => {
 					<p className="sm:text-lg">{summary}</p>
 				</div>
 			</div>
-			<div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
-				<div className="col-span-4">
+			<div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-4 lg:grid-cols-5 md:gap-8 pt-8">
+				<div className="col-span-3 lg:col-span-4">
 					<Link href="/#projects">
 						<a>
 							<p className="flex items-center pb-3 ml-[-0.35rem] text-gray-500">
@@ -76,7 +76,7 @@ const mybrary = ({ project }) => {
 					<h2 className="py-2">Overview</h2>
 					<p className="py-4">{description}</p>
 					{/* Demo + Repo Buttons */}
-					<div className="text-white mt-4">
+					<div className="text-white my-5 flex justify-center md:justify-start">
 						{demoUrl && (
 							<a
 								className="shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] px-8 py-2 mr-8"
@@ -89,7 +89,7 @@ const mybrary = ({ project }) => {
 						)}
 						{repoUrl && (
 							<a
-								className="shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] px-8 py-2 mr-8"
+								className="shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] px-8 py-2 md:mr-8"
 								href={repoUrl}
 								target="_blank"
 								rel="noreferrer"
@@ -99,9 +99,11 @@ const mybrary = ({ project }) => {
 						)}
 					</div>
 				</div>
-				<div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
+				<div className="col-span-4 md:col-span-1 gap-8 shadow-xl shadow-gray-400 rounded-xl p-4">
 					<div className="p-2">
-						<p>Technologies</p>
+						<p className="uppercase text-[#5651e5] text-center pb-2">
+							Technologies
+						</p>
 						<div className="grid grid-cols-3 md:grid-cols-1">
 							{tech.map((item) => (
 								<p className="text-gray-600 py-2 flex items-center" key={item}>
