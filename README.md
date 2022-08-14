@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome 👋
 
-## Getting Started
+This is the offical repo for my 2022 portfolio site. It is many weeks in the making, with improvements still on the way.
 
-First, run the development server:
+Visit my site at https://www.elikeith.dev/ !
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Technologies Used ⚙️
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js
+- Tailwind CSS
+- Contentful CMS
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Todo + Optimizations 📝
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [ ] Contact form functionality
+- [x] Update HTML for semantics
+- [x] Host website
+- [x] Get a [custom domain](https://www.elikeith.dev/)
+- [x] Use a CMS to dynamically generate project pages and cards
+- [ ] Dark mode toggle
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Things Learned 🔖
 
-## Learn More
+The power and convienience of Next.js coupled with TailwindCSS allowed me to focus on building the site without having to jump back and forth between files to manage routes or styles.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This was my first project using a CMS and it was the perfect solution to update my project portfolio without having to redeploy the entire site. Before this, I was reusing the same code for my project pages which I knew wasn't ideal. I wanted to map through all of my projects and use variables to fill the details. Contentful's Space API was exactly what I needed and was easy to implement while maintaining Next.js static generation.
