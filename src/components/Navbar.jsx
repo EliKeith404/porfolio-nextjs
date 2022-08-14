@@ -37,56 +37,68 @@ const Navbar = () => {
 				className={
 					nav
 						? 'hidden'
-						: 'flex justify-between items-center w-full h-full px-2 2xl:px-16'
+						: 'flex justify-between items-center w-full h-full px-2'
 				}
 			>
 				<div className="px-5">
 					<Link href="/">
-						<Image
-							className="cursor-pointer"
-							src="/assets/ek-logo.png"
-							alt="Eli's Logo"
-							width="64"
-							height="64"
-						/>
+						<a>
+							<Image
+								className="cursor-pointer"
+								src="/assets/ek-logo.png"
+								alt="Eli's Logo"
+								width="64"
+								height="64"
+							/>
+						</a>
 					</Link>
 				</div>
 				<nav className="flex items-center h-full">
 					<ul className="hidden md:flex items-center h-full">
 						<Link href="/">
-							<li className="group h-full flex items-center">
-								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-									Home
-								</span>
-							</li>
+							<a>
+								<li className="group h-full flex items-center">
+									<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+										Home
+									</span>
+								</li>
+							</a>
 						</Link>
 						<Link href="/#about">
-							<li className="group h-full flex items-center">
-								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-									About
-								</span>
-							</li>
+							<a>
+								<li className="group h-full flex items-center">
+									<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+										About
+									</span>
+								</li>
+							</a>
 						</Link>
 						<Link href="/#skills">
-							<li className="group h-full flex items-center">
-								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-									Skills
-								</span>
-							</li>
+							<a>
+								<li className="group h-full flex items-center">
+									<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+										Skills
+									</span>
+								</li>
+							</a>
 						</Link>
 						<Link href="/#projects">
-							<li className="group h-full flex items-center">
-								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-									Projects
-								</span>
-							</li>
+							<a>
+								<li className="group h-full flex items-center">
+									<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+										Projects
+									</span>
+								</li>
+							</a>
 						</Link>
 						<Link href="/#contact">
-							<li className="group h-full flex items-center">
-								<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-									Contact
-								</span>
-							</li>
+							<a>
+								<li className="group h-full flex items-center">
+									<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+										Contact
+									</span>
+								</li>
+							</a>
 						</Link>
 					</ul>
 					<div onClick={handleNav} className="md:hidden pr-4">
@@ -129,29 +141,39 @@ const Navbar = () => {
 					<nav>
 						<ul className="uppercase">
 							<Link href="/">
-								<li className="py-4 text-sm" onClick={handleNav}>
-									Home
-								</li>
+								<a>
+									<li className="py-4 text-sm" onClick={handleNav}>
+										Home
+									</li>
+								</a>
 							</Link>
 							<Link href="/#about">
-								<li className="py-4 text-sm" onClick={handleNav}>
-									About
-								</li>
+								<a>
+									<li className="py-4 text-sm" onClick={handleNav}>
+										About
+									</li>
+								</a>
 							</Link>
 							<Link href="/#skills">
-								<li className="py-4 text-sm" onClick={handleNav}>
-									Skills
-								</li>
+								<a>
+									<li className="py-4 text-sm" onClick={handleNav}>
+										Skills
+									</li>
+								</a>
 							</Link>
 							<Link href="/#projects">
-								<li className="py-4 text-sm" onClick={handleNav}>
-									Projects
-								</li>
+								<a>
+									<li className="py-4 text-sm" onClick={handleNav}>
+										Projects
+									</li>
+								</a>
 							</Link>
 							<Link href="/#contact">
-								<li className="py-4 text-sm" onClick={handleNav}>
-									Contact
-								</li>
+								<a>
+									<li className="py-4 text-sm" onClick={handleNav}>
+										Contact
+									</li>
+								</a>
 							</Link>
 						</ul>
 						<div className="pt-[7rem]">
