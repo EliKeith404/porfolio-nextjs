@@ -1,14 +1,28 @@
 import Head from 'next/head';
+import { createClient } from 'contentful';
+
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Main from '../components/Main';
-import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 
-export default function Home() {
-	const baseImagePath = '/assets';
+export async function getStaticProps() {
+	const client = createClient({
+		space: process.env.CONTENTFUL_ID,
+		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+	});
 
+	const res = await client.getEntries({ content_type: 'project' });
+
+	return {
+		props: {
+			projects: res.items,
+		},
+	};
+}
+
+export default function Home({ projects }) {
 	return (
 		<>
 			<Head>
@@ -19,11 +33,10 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Navbar />
 			<Main />
 			<About />
 			<Skills />
-			<Projects />
+			<Projects projects={projects} />
 			<Contact />
 		</>
 	);

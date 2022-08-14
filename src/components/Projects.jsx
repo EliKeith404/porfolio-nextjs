@@ -1,10 +1,8 @@
 import React from 'react';
 
-import ProjectItem from './ProjectItem';
-import MybraryImg from '../../public/assets/projects/mybrary.png';
-import GlobalDomImg from '../../public/assets/projects/globaldom.png';
+import ProjectItem from './ProjectCard';
 
-const Projects = () => {
+const Projects = ({ projects }) => {
 	return (
 		<section id="projects" className="w-full md:h-screen p-2">
 			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
@@ -12,22 +10,13 @@ const Projects = () => {
 					Projects
 				</p>
 				<h2 className="py-4">What I&apos;ve Built</h2>
-				{/* Begin Project List */}
+				{/* Begin Project Map */}
 				<div className="grid md:grid-cols-2 gap-8">
-					<ProjectItem
-						name="Global Domination"
-						tech="React, JS, Firebase"
-						image={GlobalDomImg}
-						url=""
-					/>
-					<ProjectItem
-						name="Mybrary"
-						tech="Express, JS, MongoDB"
-						image={MybraryImg}
-						url=""
-					/>
+					{projects?.map((project) => (
+						<ProjectItem key={project.sys.id} project={project} />
+					))}
 				</div>
-				{/* End Project List */}
+				{/* End Project Map */}
 			</div>
 		</section>
 	);
