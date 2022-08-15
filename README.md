@@ -8,7 +8,7 @@ Visit my site at https://www.elikeith.dev/ !
 
 - Next.js
 - Tailwind CSS
-- Contentful CMS
+- Contentful API
 
 ## Todo + Optimizations 📝
 
@@ -19,8 +19,9 @@ Visit my site at https://www.elikeith.dev/ !
 - [x] Use a CMS to dynamically generate project pages and cards
 - [x] Incremental Static Regeneration
 - [x] Fallback/Loading page
-- [x] Add custom 404 page
+- [x] Custom 404 page
 - [ ] Dark mode toggle
+- [ ] Implement Material UI?
 
 ## Things Learned 🔖
 
