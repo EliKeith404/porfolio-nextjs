@@ -28,7 +28,7 @@ const NotFound = () => {
 						Hmm it seems this page doesn&apos;t exist. Don&apos;t worry,
 						I&apos;ll get you back on track! Redirecting you to the{' '}
 						<Link href="/">
-							<a className="text-[#5651e5]">homepage</a>
+							<a className="text-[#5651e5] underline">homepage</a>
 						</Link>{' '}
 						very shortly.
 					</p>
