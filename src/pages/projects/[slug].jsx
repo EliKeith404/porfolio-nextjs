@@ -4,6 +4,7 @@ import { createClient } from 'contentful';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import Link from 'next/link';
+import Skeleton from '../../components/Projects/Skeleton';
 
 const client = createClient({
 	space: process.env.CONTENTFUL_ID,
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
 
 	return {
 		paths,
-		fallback: false,
+		fallback: true,
 	};
 };
 
@@ -33,18 +34,30 @@ export async function getStaticProps({ params }) {
 		'fields.slug': params.slug,
 	});
 
+	if (!res.items.length) {
+		return {
+			redirect: {
+				destination: '/#projects',
+				permanent: false,
+			},
+		};
+	}
+
 	return {
 		props: { project: res.items[0] },
+		revalidate: 5,
 	};
 }
 
-const mybrary = ({ project }) => {
+const ProjectDetails = ({ project }) => {
+	if (!project) return <Skeleton />;
+
 	const { name, summary, description, tech, banner, demoUrl, repoUrl } =
 		project.fields;
 
 	return (
 		<div className="w-full pt-10">
-			<div className="w-screen h-[30vh] lg:h-[40vh] relative">
+			<header className="w-screen h-[30vh] lg:h-[40vh] relative">
 				{/* Empty div for translucent overlay */}
 				<div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10"></div>
 				<Image
@@ -59,7 +72,7 @@ const mybrary = ({ project }) => {
 					<h2 className="py-2">{name}</h2>
 					<p className="sm:text-lg">{summary}</p>
 				</div>
-			</div>
+			</header>
 			<div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-4 lg:grid-cols-5 md:gap-8 pt-8">
 				<div className="col-span-3 lg:col-span-4">
 					<Link href="/#projects">
@@ -119,4 +132,4 @@ const mybrary = ({ project }) => {
 	);
 };
 
-export default mybrary;
+export default ProjectDetails;

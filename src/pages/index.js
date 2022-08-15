@@ -4,7 +4,7 @@ import { createClient } from 'contentful';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Main from '../components/Main';
-import Projects from '../components/Projects';
+import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills';
 
 export async function getStaticProps() {
@@ -19,6 +19,7 @@ export async function getStaticProps() {
 		props: {
 			projects: res.items,
 		},
+		revalidate: 5,
 	};
 }
 
