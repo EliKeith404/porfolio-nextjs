@@ -47,8 +47,8 @@ const Navbar = () => {
 								className="cursor-pointer"
 								src="/assets/ek-logo.png"
 								alt="Eli's Logo"
-								width="64"
-								height="64"
+								width="48"
+								height="48"
 							/>
 						</a>
 					</Link>
