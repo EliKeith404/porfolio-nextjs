@@ -124,8 +124,8 @@ const Navbar = () => {
 							<Image
 								src="/assets/ek-logo.png"
 								alt="Eli's Logo"
-								width="64"
-								height="64"
+								width="48"
+								height="48"
 							/>
 							<div
 								onClick={handleNav}
