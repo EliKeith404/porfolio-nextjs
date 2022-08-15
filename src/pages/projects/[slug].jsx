@@ -69,12 +69,12 @@ const ProjectDetails = ({ project }) => {
 				/>
 				{/* Project title + summary */}
 				<div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white p-2 z-10">
-					<h2 className="py-2">{name}</h2>
+					<h1 className="py-2 text-4xl">{name}</h1>
 					<p className="sm:text-lg">{summary}</p>
 				</div>
 			</header>
-			<div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-4 lg:grid-cols-5 md:gap-8 pt-8">
-				<div className="col-span-3 lg:col-span-4">
+			<main className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-4 lg:grid-cols-5 md:gap-8 pt-8">
+				<article className="col-span-3 lg:col-span-4">
 					<Link href="/#projects">
 						<a>
 							<p className="flex items-center pb-3 ml-[-0.35rem] text-gray-500">
@@ -89,7 +89,7 @@ const ProjectDetails = ({ project }) => {
 					<h2 className="py-2">Overview</h2>
 					<p className="py-4">{description}</p>
 					{/* Demo + Repo Buttons */}
-					<div className="text-white my-5 flex justify-center md:justify-start">
+					<section className="text-white my-5 flex justify-center md:justify-start">
 						{demoUrl && (
 							<a
 								className="shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] px-8 py-2 mr-8"
@@ -110,24 +110,27 @@ const ProjectDetails = ({ project }) => {
 								Repo
 							</a>
 						)}
-					</div>
-				</div>
-				<div className="col-span-4 md:col-span-1 gap-8 shadow-xl shadow-gray-400 rounded-xl p-4">
+					</section>
+				</article>
+				<aside className="col-span-4 md:col-span-1 gap-8 shadow-xl shadow-gray-400 rounded-xl p-4">
 					<div className="p-2">
 						<p className="uppercase text-[#5651e5] text-center pb-2">
 							Technologies
 						</p>
-						<div className="grid grid-cols-3 md:grid-cols-1">
+						<ul className="grid grid-cols-3 md:grid-cols-1">
 							{tech.map((item) => (
-								<p className="text-gray-600 py-2 flex items-center" key={item}>
+								<li
+									className="text-gray-600 py-2 flex items-center cursor-auto"
+									key={item}
+								>
 									<RiRadioButtonFill className="pr-1" />
 									{item}
-								</p>
+								</li>
 							))}
-						</div>
+						</ul>
 					</div>
-				</div>
-			</div>
+				</aside>
+			</main>
 		</div>
 	);
 };

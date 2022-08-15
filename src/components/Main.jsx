@@ -8,7 +8,7 @@ const Main = () => {
 	return (
 		<section id="home" className="w-full h-screen text-center">
 			<div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-				<div>
+				<main>
 					<p className="uppercase text-sm tracking-widest text-gray-600">
 						Let&apos;s build something amazing
 					</p>
@@ -24,7 +24,7 @@ const Main = () => {
 						puzzles for fellow creative minds at escape room companies!
 					</p>
 					<ConnectBtns size="p-6" />
-				</div>
+				</main>
 			</div>
 		</section>
 	);
