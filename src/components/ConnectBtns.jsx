@@ -27,11 +27,13 @@ const ConnectBtns = ({ size }) => {
 				</div>
 			</a>
 			{/* Email */}
-			<div
-				className={`${size} bg-[#ecf0f3] rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300`}
-			>
-				<AiOutlineMail />
-			</div>
+			<a href="mailto:ekbass44@gmail.com">
+				<div
+					className={`${size} bg-[#ecf0f3] rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300`}
+				>
+					<AiOutlineMail />
+				</div>
+			</a>
 			{/* Resume */}
 			<div
 				className={`${size} bg-[#ecf0f3] rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300`}

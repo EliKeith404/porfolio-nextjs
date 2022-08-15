@@ -54,7 +54,7 @@ const Navbar = () => {
 					</Link>
 				</div>
 				<nav className="flex items-center h-full min-h-full">
-					<ul className="hidden md:flex h-full">
+					<ul className="hidden md:flex h-full text-black">
 						<Link href="/">
 							<a>
 								<li className="group h-full flex items-center">
