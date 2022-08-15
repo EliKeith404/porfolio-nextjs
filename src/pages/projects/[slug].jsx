@@ -44,7 +44,9 @@ export async function getStaticProps({ params }) {
 	}
 
 	return {
-		props: { project: res.items[0] },
+		props: {
+			project: res.items[0],
+		},
 		revalidate: 5,
 	};
 }
