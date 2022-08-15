@@ -35,7 +35,11 @@ const ConnectBtns = ({ size }) => {
 				</div>
 			</a>
 			{/* Resume */}
-			<a href="https://docs.google.com/document/d/11b62J60S4DILgcgn7nVHUD6IMSvQy-PzACj6k7pIkBI/edit?usp=sharing">
+			<a
+				href="https://docs.google.com/document/d/11b62J60S4DILgcgn7nVHUD6IMSvQy-PzACj6k7pIkBI/edit?usp=sharing"
+				target="_blank"
+				rel="noreferrer"
+			>
 				<div
 					className={`${size} bg-[#ecf0f3] rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300`}
 				>
