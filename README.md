@@ -1,6 +1,6 @@
 # Welcome 👋
 
-This is the offical repo for my 2022 portfolio site. It is many weeks in the making, with improvements still on the way.
+This is the official repo for my 2022 portfolio site. It is many weeks in the making, with improvements still on the way.
 
 Visit my site at https://www.elikeith.dev/ !
 
@@ -12,12 +12,14 @@ Visit my site at https://www.elikeith.dev/ !
 
 ## Todo + Optimizations 📝
 
-- [ ] Contact form functionality
-- [x] Update HTML for semantics
 - [x] Host website
 - [x] Get a [custom domain](https://www.elikeith.dev/)
+- [ ] Contact form functionality
+- [x] Update HTML for semantics
 - [x] Use a CMS to dynamically generate project pages and cards
 - [ ] Dark mode toggle
+- [ ] Add custom 404 page
+- [ ] Incremental Static Regeneration
 
 ## Things Learned 🔖
 
