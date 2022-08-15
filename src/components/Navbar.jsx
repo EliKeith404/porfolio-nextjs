@@ -53,8 +53,8 @@ const Navbar = () => {
 						</a>
 					</Link>
 				</div>
-				<nav className="flex items-center h-full">
-					<ul className="hidden md:flex items-center h-full">
+				<nav className="flex items-center h-full min-h-full">
+					<ul className="hidden md:flex h-full">
 						<Link href="/">
 							<a>
 								<li className="group h-full flex items-center">
