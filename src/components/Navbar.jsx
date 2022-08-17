@@ -30,14 +30,24 @@ const Navbar = () => {
 	};
 
 	const handleChangeTheme = () => {
-		if (!mounted) return null;
-
 		const currentTheme = theme === 'system' ? systemTheme : theme;
 
 		if (currentTheme === 'dark') {
 			setTheme('light');
 		} else {
 			setTheme('dark');
+		}
+	};
+
+	const renderThemeText = () => {
+		if (!mounted) return null;
+
+		const currentTheme = theme === 'system' ? systemTheme : theme;
+
+		if (currentTheme === 'dark') {
+			return 'light';
+		} else {
+			return 'dark';
 		}
 	};
 
@@ -116,7 +126,7 @@ const Navbar = () => {
 							onClick={() => handleChangeTheme()}
 						>
 							<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-								{mounted && (theme === 'dark' ? 'Light' : 'Dark')}
+								{renderThemeText()}
 							</span>
 						</li>
 					</ul>
@@ -194,7 +204,7 @@ const Navbar = () => {
 								</a>
 							</Link>
 							<li className="py-4 text-sm" onClick={handleChangeTheme}>
-								{mounted && theme === 'dark' ? 'Light' : 'Dark'}
+								{renderThemeText()}
 							</li>
 						</ul>
 						<div className="pt-[5rem]">
