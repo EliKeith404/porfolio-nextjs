@@ -9,13 +9,13 @@ const Contact = () => {
 	return (
 		<section id="contact" className="w-full md:h-screen p-2 md:pt-[30rem]">
 			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
-				<p className="text-xl tracking-widest uppercase text-[#5651e5]">
+				<span className="text-xl tracking-widest uppercase text-[#5651e5]">
 					Contact
-				</p>
+				</span>
 				<h2 className="py-4">Get In Touch</h2>
 				<div className="grid lg:grid-cols-5 gap-8">
 					{/* Left */}
-					<div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+					<div className="card col-span-3 lg:col-span-2">
 						<div className="lg:p-4 h-full">
 							<div className="text-center">
 								<Image
@@ -36,7 +36,7 @@ const Contact = () => {
 								</p>
 							</div>
 							<div>
-								<p className="uppercase text-center pt-8 text-[#5651e5]">
+								<p className="uppercase text-center pt-8 text-[#5651e5] dark:text-[#5651e5]">
 									Connect with me
 								</p>
 								<ConnectBtns size="p-6" />
@@ -44,7 +44,7 @@ const Contact = () => {
 						</div>
 					</div>
 					{/* Right */}
-					<div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+					<div className="card col-span-3 lg:p-4">
 						<div className="p-4">
 							<form>
 								<div className="grid md:grid-cols-2 gap-4 w-full py-2">
@@ -114,7 +114,7 @@ const Contact = () => {
 				</div>
 				<div className="flex justify-center items-center flex-col py-12">
 					<Link href="/#home">
-						<div className="p-4 bg-[#ecf0f3] rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-110 ease-in duration-300">
+						<div className="btn-round hover-grow p-4">
 							<HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
 						</div>
 					</Link>

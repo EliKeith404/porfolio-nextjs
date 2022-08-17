@@ -1,7 +1,4 @@
 import React from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import ConnectBtns from './ConnectBtns';
 
 const Main = () => {
@@ -9,13 +6,13 @@ const Main = () => {
 		<section id="home" className="w-full h-screen text-center">
 			<div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
 				<main>
-					<p className="uppercase text-sm tracking-widest text-gray-600">
+					<p className="uppercase text-sm tracking-widest ">
 						Let&apos;s build something amazing
 					</p>
-					<h1 className="py-4 text-gray-700">
+					<h1 className="py-4">
 						Hi, I&apos;m <span className="text-[#5651e5]">Eli</span>
 					</h1>
-					<h2 className="py-2 text-gray-700">A Fullstack Web Developer</h2>
+					<h2 className="py-2">A Fullstack Web Developer</h2>
 					<p className="py-4 text-gray-600 max-w-[70%] m-auto">
 						Long time learner and community taught software engineer with a deep
 						interest in automation. Familiar with a wide range of languages and

@@ -18,15 +18,15 @@ const Skills = () => {
 	return (
 		<section id="skills" className="w-full md:h-screen p-2">
 			<div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
-				<p className="text-xl tracking-widest uppercase text-[#5651e5]">
+				<span className="text-xl tracking-widest uppercase text-[#5651e5]">
 					Skills
-				</p>
+				</span>
 				<h2 className="py-4">My Toolbelt</h2>
 				{/* Skills Map */}
 				<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 					{skills.map((skill) => (
 						<div
-							className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
+							className="p-6 card hover-grow hover:scale-105"
 							key={skill.name}
 						>
 							<div className="grid sm:grid-cols-2 gap-4 justify-center items-center">

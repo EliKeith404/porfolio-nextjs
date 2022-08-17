@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useTheme } from 'next-themes';
 
 import ConnectBtns from './ConnectBtns';
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [shadow, setShadow] = useState(false);
-
-	const handleNav = () => {
-		setNav(!nav);
-	};
+	const [mounted, setMounted] = useState(false);
+	const { systemTheme, theme, setTheme } = useTheme();
 
 	useEffect(() => {
+		setMounted(true);
+
 		const handleNavShadow = () => {
 			if (window.scrollY >= 90) {
 				setShadow(true);
@@ -24,14 +25,24 @@ const Navbar = () => {
 		window.addEventListener('scroll', handleNavShadow);
 	}, []);
 
+	const handleNav = () => {
+		setNav(!nav);
+	};
+
+	const handleChangeTheme = () => {
+		if (!mounted) return null;
+
+		const currentTheme = theme === 'system' ? systemTheme : theme;
+
+		if (currentTheme === 'dark') {
+			setTheme('light');
+		} else {
+			setTheme('dark');
+		}
+	};
+
 	return (
-		<div
-			className={
-				shadow
-					? 'fixed w-full h-20 z-[100] bg-[#ecf0f3] shadow-xl'
-					: 'fixed w-full h-20 z-[100] bg-[#ecf0f3]'
-			}
-		>
+		<div className={shadow ? 'nav shadow-xl' : 'nav'}>
 			{/* Desktop Nav */}
 			<header
 				className={
@@ -54,7 +65,7 @@ const Navbar = () => {
 					</Link>
 				</div>
 				<nav className="flex items-center h-full min-h-full">
-					<ul className="hidden md:flex h-full text-black">
+					<ul className="hidden md:flex h-full">
 						<Link href="/">
 							<a>
 								<li className="group h-full flex items-center">
@@ -100,6 +111,14 @@ const Navbar = () => {
 								</li>
 							</a>
 						</Link>
+						<li
+							className="group h-full flex items-center"
+							onClick={() => handleChangeTheme()}
+						>
+							<span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+								{mounted && (theme === 'dark' ? 'Light' : 'Dark')}
+							</span>
+						</li>
 					</ul>
 					<div onClick={handleNav} className="md:hidden pr-4">
 						<AiOutlineMenu size={25} />
@@ -115,8 +134,8 @@ const Navbar = () => {
 				<header
 					className={
 						nav
-							? 'fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-							: 'fixed right-[-100%] h-screen top-0 p-10 ease-in duration-500'
+							? 'nav-mobile right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] bg-[#ecf0f3] dark:bg-gray-800'
+							: 'nav-mobile right-[-100%] top-0'
 					}
 				>
 					<div>
@@ -127,10 +146,7 @@ const Navbar = () => {
 								width="48"
 								height="48"
 							/>
-							<div
-								onClick={handleNav}
-								className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
-							>
+							<div onClick={handleNav} className="btn-round p-3 cursor-pointer">
 								<AiOutlineClose />
 							</div>
 						</div>
@@ -177,9 +193,12 @@ const Navbar = () => {
 									</li>
 								</a>
 							</Link>
+							<li className="py-4 text-sm" onClick={handleChangeTheme}>
+								{mounted && theme === 'dark' ? 'Light' : 'Dark'}
+							</li>
 						</ul>
 						<div className="pt-[5rem]">
-							<p className="uppercase tracking-widest text-center text-[#5651e5]">
+							<p className="uppercase tracking-widest text-center text-[#5651e5] dark:text-[#5651e5]">
 								Connect With Me
 							</p>
 							<ConnectBtns size="p-3" />

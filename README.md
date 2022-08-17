@@ -20,7 +20,7 @@ Visit my site at https://www.elikeith.dev/ !
 - [x] Incremental Static Regeneration
 - [x] Fallback/Loading page
 - [x] Add custom 404 page
-- [ ] Dark mode toggle
+- [x] Dark mode toggle
 
 ## Things Learned 🔖
 
