@@ -31,17 +31,22 @@ export default function Home({ projects }) {
 		<>
 			<Head>
 				<title>Eli | Fullstack Developer</title>
-				<meta name />
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<meta
 					property="og:title"
 					content="Eli-Keith Bass | Fullstack Web Developer"
 					key="title"
 				/>
-				<meta property="og:image" content={PreviewImg} key="image" />
 				<meta
 					property="og:description"
 					content="Portfolio website of fullstack Javascript and React projects by Eli-Keith Bass"
 					key="description"
+				/>
+				<meta
+					property="og:image"
+					content="https://raw.githubusercontent.com/EliKeith404/porfolio-nextjs/main/public/assets/preview.png"
+					key="image"
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
