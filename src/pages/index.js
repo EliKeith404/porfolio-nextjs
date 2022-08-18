@@ -36,18 +36,13 @@ export default function Home({ projects }) {
 				<meta
 					property="og:title"
 					content="Eli-Keith Bass | Fullstack Web Developer"
-					key="title"
 				/>
 				<meta
 					property="og:description"
 					content="Portfolio website of fullstack Javascript and React projects by Eli-Keith Bass"
-					key="description"
 				/>
-				<meta
-					property="og:image"
-					content="https://raw.githubusercontent.com/EliKeith404/porfolio-nextjs/main/public/assets/preview.png"
-					key="image"
-				/>
+				<meta name="image" property="og:image" content="/assets/preview.png" />
+				<meta property="og:url" content="https://www.elikeith.dev/" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Main />
