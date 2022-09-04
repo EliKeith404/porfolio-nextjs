@@ -55,7 +55,7 @@ html {
   }
 
   .btn-round {
-    @apply bg-[#ecf0f3] dark:bg-gray-700 shadow-lg shadow-gray-400 dark:shadow-gray-900 tracking-wide   cursor-pointer rounded-full;
+    @apply bg-[#ecf0f3] dark:bg-gray-700 shadow-lg shadow-gray-400 dark:shadow-gray-900 tracking-wide cursor-pointer rounded-full;
   }
 
   .hover-grow {
