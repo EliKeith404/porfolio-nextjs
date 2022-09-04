@@ -94,7 +94,7 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
-                    name="subject"
+                    name="_subject"
                     id="subject"
                   />
                 </div>
@@ -109,6 +109,11 @@ const Contact = () => {
                     cols="30"
                     rows="6"
                   ></textarea>
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://www.elikeith.dev/SubmissionSuccess"
+                  />
                 </div>
                 <button className="w-full p-4 mt-4 text-gray-100">
                   Send Message
