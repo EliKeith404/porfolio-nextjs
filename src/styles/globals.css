@@ -3,66 +3,66 @@
 @tailwind utilities;
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @layer base {
-	body {
-		@apply bg-[#ecf0f3] text-[#1f2937] tracking-wide dark:bg-gray-800 dark:text-[#ecf0f3];
-	}
+  body {
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide dark:bg-gray-800 dark:text-[#ecf0f3];
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font-bold text-gray-700 dark:text-[#ecf0f3];
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-gray-700 dark:text-[#ecf0f3];
+  }
 
-	h1 {
-		@apply text-4xl sm:text-5xl md:text-6xl;
-	}
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
 
-	h2 {
-		@apply text-3xl sm:text-4xl;
-	}
+  h2 {
+    @apply text-2xl sm:text-4xl;
+  }
 
-	p {
-		@apply text-gray-600 dark:text-white;
-	}
+  p {
+    @apply text-gray-600 dark:text-white;
+  }
 
-	li {
-		@apply cursor-pointer;
-	}
+  li {
+    @apply cursor-pointer;
+  }
 
-	button {
-		@apply shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
-	}
+  button {
+    @apply shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
+  }
 }
 
 @layer components {
-	.nav {
-		@apply bg-[#ecf0f3] dark:bg-gray-800 shadow-gray-400 dark:shadow-gray-900 text-[#1f2937] dark:text-[#ecf0f3] fixed w-full h-20 z-[100];
-	}
+  .nav {
+    @apply bg-[#ecf0f3] dark:bg-gray-800 shadow-gray-400 dark:shadow-gray-900 text-[#1f2937] dark:text-[#ecf0f3] fixed w-full h-20 z-[100];
+  }
 
-	.nav-mobile {
-		@apply fixed h-screen p-10 ease-in duration-500;
-	}
+  .nav-mobile {
+    @apply fixed h-screen p-10 ease-in duration-500;
+  }
 
-	.btn {
-		@apply shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
-	}
+  .btn {
+    @apply shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
+  }
 
-	.btn-round {
-		@apply bg-[#ecf0f3] dark:bg-gray-700 shadow-lg shadow-gray-400 dark:shadow-gray-900 tracking-wide   cursor-pointer rounded-full;
-	}
+  .btn-round {
+    @apply bg-[#ecf0f3] dark:bg-gray-700 shadow-lg shadow-gray-400 dark:shadow-gray-900 tracking-wide   cursor-pointer rounded-full;
+  }
 
-	.hover-grow {
-		@apply hover:scale-110 ease-in duration-300;
-	}
+  .hover-grow {
+    @apply hover:scale-110 ease-in duration-300;
+  }
 
-	.card {
-		@apply bg-[#ecf0f3] dark:bg-gray-800 shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl w-full h-full p-4;
-	}
+  .card {
+    @apply bg-[#ecf0f3] dark:bg-gray-800 shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl w-full h-full p-4;
+  }
 }
