@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
         </div>
       )) ||
         (isUpdated && (
-          <div className="absolute top-2 right-2 p-2 bg-orange-400 dark:bg-orange-700 shadow-lg rounded-xl">
+          <div className="absolute top-2 right-2 p-2 bg-orange-300 dark:bg-orange-600 shadow-lg rounded-xl">
             <span>Updated</span>
           </div>
         ))}

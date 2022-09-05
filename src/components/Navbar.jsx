@@ -5,6 +5,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useTheme } from 'next-themes';
 
 import ConnectBtns from './ConnectBtns';
+import NavbarItem from './NavbarItem';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -76,51 +77,11 @@ const Navbar = () => {
         </div>
         <nav className="flex items-center h-full min-h-full">
           <ul className="hidden md:flex h-full">
-            <Link href="/">
-              <a>
-                <li className="group h-full flex items-center">
-                  <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-                    Home
-                  </span>
-                </li>
-              </a>
-            </Link>
-            <Link href="/#about">
-              <a>
-                <li className="group h-full flex items-center">
-                  <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-                    About
-                  </span>
-                </li>
-              </a>
-            </Link>
-            <Link href="/#skills">
-              <a>
-                <li className="group h-full flex items-center">
-                  <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-                    Skills
-                  </span>
-                </li>
-              </a>
-            </Link>
-            <Link href="/#projects">
-              <a>
-                <li className="group h-full flex items-center">
-                  <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-                    Projects
-                  </span>
-                </li>
-              </a>
-            </Link>
-            <Link href="/#contact">
-              <a>
-                <li className="group h-full flex items-center">
-                  <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-                    Contact
-                  </span>
-                </li>
-              </a>
-            </Link>
+            <NavbarItem href={'/'}>Home</NavbarItem>
+            <NavbarItem href={'/#about'}>About</NavbarItem>
+            <NavbarItem href={'/#skills'}>Skills</NavbarItem>
+            <NavbarItem href={'/#projects'}>Projects</NavbarItem>
+            <NavbarItem href={'/#contact'}>Contact</NavbarItem>
             <li
               className="group h-full flex items-center"
               onClick={() => handleChangeTheme()}
@@ -168,41 +129,25 @@ const Navbar = () => {
           </div>
           <nav>
             <ul className="uppercase">
-              <Link href="/">
-                <a>
-                  <li className="py-4 text-sm" onClick={handleNav}>
-                    Home
-                  </li>
-                </a>
-              </Link>
-              <Link href="/#about">
-                <a>
-                  <li className="py-4 text-sm" onClick={handleNav}>
-                    About
-                  </li>
-                </a>
-              </Link>
-              <Link href="/#skills">
-                <a>
-                  <li className="py-4 text-sm" onClick={handleNav}>
-                    Skills
-                  </li>
-                </a>
-              </Link>
-              <Link href="/#projects">
-                <a>
-                  <li className="py-4 text-sm" onClick={handleNav}>
-                    Projects
-                  </li>
-                </a>
-              </Link>
-              <Link href="/#contact">
-                <a>
-                  <li className="py-4 text-sm" onClick={handleNav}>
-                    Contact
-                  </li>
-                </a>
-              </Link>
+              <NavbarItem href="/" isMobile={true} callback={handleNav}>
+                Home
+              </NavbarItem>
+              <NavbarItem href="/#about" isMobile={true} callback={handleNav}>
+                About
+              </NavbarItem>
+              <NavbarItem href="/#skills" isMobile={true} callback={handleNav}>
+                Skills
+              </NavbarItem>
+              <NavbarItem
+                href="/#projects"
+                isMobile={true}
+                callback={handleNav}
+              >
+                Projects
+              </NavbarItem>
+              <NavbarItem href="/#contact" isMobile={true} callback={handleNav}>
+                Contact
+              </NavbarItem>
               <li className="py-4 text-sm" onClick={handleChangeTheme}>
                 {renderThemeText()}
               </li>
