@@ -5,40 +5,25 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useTheme } from 'next-themes';
 
 import ConnectBtns from './ConnectBtns';
+import useWindow from '../hooks/useWindow';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
 
+  const window = useWindow();
+
+  // Once the page loads, allow theme to begin rendering
   useEffect(() => {
     setMounted(true);
-
-    const handleNavShadow = () => {
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
-    };
-    window.addEventListener('scroll', handleNavShadow);
   }, []);
 
   const handleNav = () => {
     setNav((prev) => !prev);
   };
 
-  const handleChangeTheme = () => {
-    const currentTheme = theme === 'system' ? systemTheme : theme;
-
-    if (currentTheme === 'dark') {
-      setTheme('light');
-    } else {
-      setTheme('dark');
-    }
-  };
-
+  // To prevent hydration errors/mismatch, only render text when mounted
   const renderThemeText = () => {
     if (!mounted) return null;
 
@@ -51,8 +36,18 @@ const Navbar = () => {
     }
   };
 
+  const handleChangeTheme = () => {
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
+    if (currentTheme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  };
+
   return (
-    <div className={shadow ? 'nav shadow-xl' : 'nav'}>
+    <div className={window.scrollY >= 90 ? 'nav shadow-xl' : 'nav'}>
       {/* Desktop Nav */}
       <header className="flex justify-between items-center w-full h-full px-2">
         <div className="px-5">
@@ -162,6 +157,8 @@ const Navbar = () => {
 
 export default Navbar;
 
+///////////////////////////
+// Nav Item Subcomponent
 const NavbarItem = ({ href, children, isMobile, callback }) => {
   return (
     <>
