@@ -5,7 +5,6 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useTheme } from 'next-themes';
 
 import ConnectBtns from './ConnectBtns';
-import NavbarItem from './NavbarItem';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -55,13 +54,7 @@ const Navbar = () => {
   return (
     <div className={shadow ? 'nav shadow-xl' : 'nav'}>
       {/* Desktop Nav */}
-      <header
-        className={
-          nav
-            ? 'hidden'
-            : 'flex justify-between items-center w-full h-full px-2'
-        }
-      >
+      <header className="flex justify-between items-center w-full h-full px-2">
         <div className="px-5">
           <Link href="/">
             <a>
@@ -75,6 +68,7 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
+        {/* Nav Elements */}
         <nav className="flex items-center h-full min-h-full">
           <ul className="hidden md:flex h-full">
             <NavbarItem href={'/'}>Home</NavbarItem>
@@ -87,7 +81,7 @@ const Navbar = () => {
               onClick={() => handleChangeTheme()}
             >
               <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
-                {renderThemeText()}
+                {renderThemeText() || 'Theme'}
               </span>
             </li>
           </ul>
@@ -127,6 +121,7 @@ const Navbar = () => {
               </p>
             </div>
           </div>
+          {/* Nav Elements */}
           <nav>
             <ul className="uppercase">
               <NavbarItem href="/" isMobile={true} callback={handleNav}>
@@ -149,7 +144,7 @@ const Navbar = () => {
                 Contact
               </NavbarItem>
               <li className="py-4 text-sm" onClick={handleChangeTheme}>
-                {renderThemeText()}
+                {renderThemeText() || 'Theme'}
               </li>
             </ul>
             <div className="pt-[5rem]">
@@ -166,3 +161,29 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const NavbarItem = ({ href, children, isMobile, callback }) => {
+  return (
+    <>
+      {!isMobile ? (
+        // Desktop
+        <Link href={href}>
+          <a className="group h-full flex items-center">
+            <li className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+              {children}
+            </li>
+          </a>
+        </Link>
+      ) : (
+        // Mobile
+        <Link href={href}>
+          <a>
+            <li className="py-4 text-sm" onClick={callback}>
+              {children}
+            </li>
+          </a>
+        </Link>
+      )}
+    </>
+  );
+};
