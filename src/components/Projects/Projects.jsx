@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProjectItem from './ProjectCard';
+import ProjectCard from './ProjectCard';
 
 const Projects = ({ projects }) => {
   return (
@@ -13,7 +13,7 @@ const Projects = ({ projects }) => {
         {/* Begin Project Map */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects?.map((project) => (
-            <ProjectItem key={project.sys.id} project={project} />
+            <ProjectCard key={project.sys.id} project={project} />
           ))}
         </div>
         {/* End Project Map */}

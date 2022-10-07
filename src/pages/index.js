@@ -6,7 +6,6 @@ import Contact from '../components/Contact';
 import Main from '../components/Main';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills';
-import PreviewImg from '../../public/assets/preview.png';
 import ScrollIndicator from '../components/ScrollIndicator';
 
 export async function getStaticProps() {
@@ -16,18 +15,28 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: 'project' });
+  const [index, about, skills, projects, contact] = await Promise.all([
+    client.getEntries({ content_type: 'indexSection' }),
+    client.getEntries({ content_type: 'aboutSection' }),
+    client.getEntries({ content_type: 'skills' }),
+    client.getEntries({ content_type: 'project' }),
+    client.getEntries({ content_type: 'contactSection' }),
+  ]);
 
   // Return projects as a prop, and search for new entries every 5 seconds
   return {
     props: {
-      projects: res.items,
+      index: index.items[0],
+      about: about.items[0],
+      skills: skills.items,
+      projects: projects.items,
+      contact: contact.items[0],
     },
     revalidate: 5,
   };
 }
 
-export default function Home({ projects }) {
+export default function Home({ index, about, skills, projects, contact }) {
   return (
     <>
       <Head>
@@ -48,11 +57,11 @@ export default function Home({ projects }) {
       </Head>
       <div className="flex flex-col justify-between">
         <ScrollIndicator />
-        <Main />
-        <About />
-        <Skills />
+        <Main content={index} />
+        <About content={about} />
+        <Skills skills={skills} />
         <Projects projects={projects} />
-        <Contact />
+        <Contact content={contact} />
       </div>
     </>
   );

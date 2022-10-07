@@ -5,7 +5,9 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
 import ConnectBtns from './ConnectBtns';
 
-const Contact = () => {
+const Contact = ({ content }) => {
+  const description = content.fields.description;
+
   return (
     <section id="contact" className="w-full p-2">
       <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
@@ -29,11 +31,7 @@ const Contact = () => {
               <div>
                 <h3 className="text-[30px] py-2">Eli-Keith Bass</h3>
                 <p>Fullstack Developer</p>
-                <p className="py-4">
-                  I am available for freelance or full-time positions. Please
-                  fill out the form or reach out on LinkedIn if you&apos;d like
-                  to get in touch!
-                </p>
+                <p className="py-4">{description}</p>
               </div>
               <div>
                 <p className="uppercase text-center pt-8 text-[#5651e5] dark:text-[#5651e5]">
