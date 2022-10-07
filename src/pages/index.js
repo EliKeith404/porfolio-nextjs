@@ -23,7 +23,7 @@ export async function getStaticProps() {
     client.getEntries({ content_type: 'contactSection' }),
   ]);
 
-  // Return projects as a prop, and search for new entries every 5 seconds
+  // Return content as props, and search for new entries every 5 seconds
   return {
     props: {
       index: index.items[0],

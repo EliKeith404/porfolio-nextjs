@@ -9,7 +9,7 @@ const Contact = ({ content }) => {
   const description = content.fields.description;
 
   return (
-    <section id="contact" className="w-full p-2">
+    <section id="contact" className="w-full min-h-screen p-2">
       <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
         <span className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact

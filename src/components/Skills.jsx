@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Skills = ({ skills }) => {
   return (
-    <section id="skills" className="w-full md:h-screen p-2 min-h-[500px]">
+    <section id="skills" className="w-full min-h-screen p-2">
       <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
         <span className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
