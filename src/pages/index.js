@@ -15,10 +15,10 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const [index, about, skills, projects, contact] = await Promise.all([
+  const [index, about, skillsList, projects, contact] = await Promise.all([
     client.getEntries({ content_type: 'indexSection' }),
     client.getEntries({ content_type: 'aboutSection' }),
-    client.getEntries({ content_type: 'skills' }),
+    client.getEntries({ content_type: 'skillsList' }),
     client.getEntries({ content_type: 'project' }),
     client.getEntries({ content_type: 'contactSection' }),
   ]);
@@ -28,7 +28,7 @@ export async function getStaticProps() {
     props: {
       index: index.items[0],
       about: about.items[0],
-      skills: skills.items,
+      skills: skillsList.items[0].fields.skills,
       projects: projects.items,
       contact: contact.items[0],
     },
