@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
     new Date(createdDate) > new Date(d.setDate(d.getDate() - 7));
 
   const isUpdated =
-    new Date(updatedDate) > new Date(d.setDate(d.getDate() - 7));
+    new Date(updatedDate) > new Date(d.setDate(d.getDate() - 4));
 
   return (
     <article className="card group relative flex items-center justify-center hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
