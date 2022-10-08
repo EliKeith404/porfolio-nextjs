@@ -6,7 +6,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'RedRing';
+  src: url(/assets/fonts/RedRing-Medium.otf);
+  font-style: normal;
+}
+
 @layer base {
+  .logo {
+    font-family: RedRing, sans-serif;
+    font-weight: 500;
+  }
+
   body {
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide dark:bg-gray-800 dark:text-[#ecf0f3];
   }
@@ -64,5 +75,34 @@ html {
 
   .card {
     @apply bg-[#ecf0f3] dark:bg-gray-800 shadow-xl shadow-gray-400 dark:shadow-gray-900 rounded-xl w-full h-full p-4;
+  }
+}
+
+@layer utilities {
+  .text--purple {
+    @apply text-[#5651e5] dark:text-[#a777ff];
+  }
+
+  .sr-only {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(
+      1px 1px 1px 1px
+    ); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(
+      1px,
+      1px,
+      1px,
+      1px
+    ); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(
+      50%
+    ); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
   }
 }

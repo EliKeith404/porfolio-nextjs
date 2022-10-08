@@ -82,11 +82,11 @@ const ProjectDetails = ({ project }) => {
             <div className="max-w-[100px] pb-3 ml-[-0.35rem]">
               <a className="flex items-center cursor-pointer hover:underline underline-offset-4">
                 <MdKeyboardArrowLeft size={22} className="mt-[0.12rem]" />
-                <p className="text-gray-500 dark:text-gray-500">Back</p>
+                <p className="text-gray-500 dark:text-gray-300">Back</p>
               </a>
             </div>
           </Link>
-          <p className="text-xl tracking-widest uppercase text-[#5651e5] dark:text-[#5651e5]">
+          <p className="text-xl tracking-widest uppercase text--purple">
             Project
           </p>
           <h2 className="py-2">Overview</h2>
@@ -124,7 +124,7 @@ const ProjectDetails = ({ project }) => {
         </article>
         <aside className="card col-span-4 md:col-span-1 gap-8">
           <div className="p-2">
-            <h6 className="uppercase text-[#5651e5] dark:text-[#5651e5] text-center font-normal tracking-widest pb-2">
+            <h6 className="uppercase text--purple text-center font-normal tracking-widest pb-2">
               Technologies
             </h6>
             <ul className="grid grid-cols-3 md:grid-cols-1">

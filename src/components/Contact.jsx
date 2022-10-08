@@ -11,7 +11,7 @@ const Contact = ({ content }) => {
   return (
     <section id="contact" className="w-full min-h-screen p-2">
       <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
-        <span className="text-xl tracking-widest uppercase text-[#5651e5]">
+        <span className="text-xl tracking-widest uppercase text--purple">
           Contact
         </span>
         <h2 className="py-4">Get In Touch</h2>
@@ -34,7 +34,7 @@ const Contact = ({ content }) => {
                 <p className="py-4">{description}</p>
               </div>
               <div>
-                <p className="uppercase text-center pt-8 text-[#5651e5] dark:text-[#5651e5]">
+                <p className="uppercase text-center pt-8 text--purple">
                   Connect with me
                 </p>
                 <ConnectBtns size="p-6" />
@@ -123,7 +123,7 @@ const Contact = ({ content }) => {
         <div className="flex justify-center items-center flex-col py-12">
           <Link href="/">
             <div className="btn-round hover-grow p-4">
-              <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
+              <HiOutlineChevronDoubleUp className="text--purple" size={30} />
             </div>
           </Link>
           <div>

@@ -14,6 +14,7 @@ const ScrollIndicator = () => {
           <Link href="/#about">
             <div className="max-w-[300px] flex justify-center items-center hover-grow animate-pulse -z-10">
               <span className="border-y border-current w-12 mr-2 "></span>
+              <span className="sr-only">Skip content</span>
               <HiChevronDoubleDown size={22} />
               <span className="border-y border-current w-12 ml-2 "></span>
             </div>

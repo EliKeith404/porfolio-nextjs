@@ -13,7 +13,7 @@ const Main = ({ content }) => {
             Let&apos;s build something amazing
           </p>
           <h1 className="py-1 sm:py-4">
-            Hi, I&apos;m <span className="text-[#5651e5]">Eli</span>
+            Hi, I&apos;m <span className="text--purple">Eli</span>
           </h1>
           <h2 className="py-1 sm:py-2">A Fullstack Web Developer</h2>
           <p className="py-2 sm:py-4 text-gray-600 max-w-[90%] sm:max-w-[70%] m-auto">

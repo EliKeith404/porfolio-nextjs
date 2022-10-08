@@ -4,14 +4,14 @@ import Image from 'next/image';
 const Skills = ({ skills }) => {
   return (
     <section id="skills" className="w-full min-h-screen p-2">
-      <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
-        <span className="text-xl tracking-widest uppercase text-[#5651e5]">
+      <div className="max-w-[1240px] h-full mx-auto px-2 py-16 flex flex-col justify-center">
+        <span className="text-xl tracking-widest uppercase text--purple">
           Skills
         </span>
         <h2 className="py-4">My Toolbelt</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((skill) => (
-            <SkillsItem skill={skill.fields} key={skill.sys.id} />
+          {skills.map((skill, i) => (
+            <SkillsItem skill={skill.fields} key={i} />
           ))}
         </div>
       </div>
@@ -30,7 +30,7 @@ const SkillsItem = ({ skill }) => {
           <Image
             src={`https:${skill.image.fields.file.url}`}
             alt={skill.name + ' Logo'}
-            className={skill.invert && 'dark:invert'}
+            className={skill.invert ? 'dark:invert' : ''}
             width="64"
             height="64"
           />

@@ -9,7 +9,7 @@ const About = ({ content }) => {
     <section id="about" className="w-full min-h-screen p-2 flex items-center">
       <div className="max-w-[1240px] px-2 py-16 m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <span className="text-xl tracking-widest uppercase text-[#5651e5]">
+          <span className="text-xl tracking-widest uppercase text--purple">
             About
           </span>
           <h2 className="py-4">Who Am I</h2>

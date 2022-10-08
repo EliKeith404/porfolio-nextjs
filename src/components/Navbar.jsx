@@ -53,13 +53,7 @@ const Navbar = () => {
         <div className="px-5">
           <Link href="/">
             <a>
-              <Image
-                className="cursor-pointer"
-                src="/assets/ek-logo.png"
-                alt="Eli's Logo"
-                width="48"
-                height="48"
-              />
+              <span className="text-4xl font-redRing text--purple">EK</span>
             </a>
           </Link>
         </div>
@@ -100,13 +94,9 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image
-                src="/assets/ek-logo.png"
-                alt="Eli's Logo"
-                width="48"
-                height="48"
-              />
+              <span className="text-4xl font-redRing text--purple">EK</span>
               <div onClick={handleNav} className="btn-round p-3 cursor-pointer">
+                <p className="sr-only">Close Nav</p>
                 <AiOutlineClose />
               </div>
             </div>
@@ -143,7 +133,7 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="pt-[5rem]">
-              <p className="uppercase tracking-widest text-center text-[#5651e5] dark:text-[#5651e5]">
+              <p className="uppercase tracking-widest text-center text--purple">
                 Connect With Me
               </p>
               <ConnectBtns size="p-3" />
@@ -161,26 +151,26 @@ export default Navbar;
 // Nav Item Subcomponent
 const NavbarItem = ({ href, children, isMobile, callback }) => {
   return (
-    <>
+    <li>
       {!isMobile ? (
         // Desktop
         <Link href={href}>
           <a className="group h-full flex items-center">
-            <li className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
+            <span className="mx-5 py-1 border-b-2 border-transparent group-hover:border-[#5451e5] uppercase text-sm">
               {children}
-            </li>
+            </span>
           </a>
         </Link>
       ) : (
         // Mobile
         <Link href={href}>
           <a>
-            <li className="py-4 text-sm" onClick={callback}>
+            <span className="py-4 text-sm" onClick={callback}>
               {children}
-            </li>
+            </span>
           </a>
         </Link>
       )}
-    </>
+    </li>
   );
 };

@@ -11,6 +11,9 @@ module.exports = {
         hs: '400px',
       },
     },
+    fontFamily: {
+      redRing: ['RedRing', 'sans-serif'],
+    },
   },
   plugins: [],
 };
