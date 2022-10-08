@@ -9,7 +9,7 @@ const Contact = ({ content }) => {
   const description = content.fields.description;
 
   return (
-    <section id="contact" className="w-full min-h-screen p-2">
+    <section id="contact" className="w-full min-h-screen p-2 flex items-center">
       <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
         <span className="text-xl tracking-widest uppercase text--purple">
           Contact
@@ -24,8 +24,8 @@ const Contact = ({ content }) => {
                   className="rounded-xl hover:scale-105 ease-in duration-300"
                   src="/assets/workstation.jpg"
                   alt="/"
-                  width="6000"
-                  height="4000"
+                  width="750"
+                  height="500"
                 />
               </div>
               <div>
@@ -122,9 +122,12 @@ const Contact = ({ content }) => {
         </div>
         <div className="flex justify-center items-center flex-col py-12">
           <Link href="/">
-            <div className="btn-round hover-grow p-4">
-              <HiOutlineChevronDoubleUp className="text--purple" size={30} />
-            </div>
+            <a>
+              <div className="btn-round hover-grow p-4">
+                <p className="sr-only">Back To Top</p>
+                <HiOutlineChevronDoubleUp className="text--purple" size={30} />
+              </div>
+            </a>
           </Link>
           <div>
             <p className="uppercase mt-2 text-sm text-gray-600">Back to top</p>

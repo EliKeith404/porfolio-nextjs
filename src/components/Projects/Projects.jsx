@@ -4,7 +4,10 @@ import ProjectCard from './ProjectCard';
 
 const Projects = ({ projects }) => {
   return (
-    <section id="projects" className="w-full min-h-screen p-2">
+    <section
+      id="projects"
+      className="w-full min-h-screen p-2 flex items-center"
+    >
       <div className="max-w-[1240px] mx-auto px-2 py-16 flex flex-col justify-center h-full">
         <span className="text-xl tracking-widest uppercase text--purple">
           Projects

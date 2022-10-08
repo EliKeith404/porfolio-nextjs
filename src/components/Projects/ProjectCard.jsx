@@ -25,12 +25,12 @@ const ProjectCard = ({ project }) => {
         height={thumbnail.fields.file.details.image.height}
       />
       {(isNewProject && (
-        <div className="absolute top-2 right-2 p-2 bg-red-400 dark:bg-red-800 shadow-lg rounded-xl">
+        <div className="absolute top-2 right-2 py-2 px-4 bg-red-400 dark:bg-red-800 shadow-lg rounded-xl">
           <span>New</span>
         </div>
       )) ||
         (isUpdated && (
-          <div className="absolute top-2 right-2 p-2 bg-orange-300 dark:bg-orange-600 shadow-lg rounded-xl">
+          <div className="absolute top-2 right-2 py-2 px-4 bg-orange-300 dark:bg-orange-600 shadow-lg rounded-xl">
             <span>Updated</span>
           </div>
         ))}

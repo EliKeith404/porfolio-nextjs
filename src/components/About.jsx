@@ -8,7 +8,7 @@ const About = ({ content }) => {
   return (
     <section id="about" className="w-full min-h-screen p-2 flex items-center">
       <div className="max-w-[1240px] px-2 py-16 m-auto md:grid grid-cols-3 gap-8">
-        <div className="col-span-2">
+        <div className="col-span-1 md:col-span-2">
           <span className="text-xl tracking-widest uppercase text--purple">
             About
           </span>
@@ -19,7 +19,7 @@ const About = ({ content }) => {
             </p>
           ))}
         </div>
-        <div className="card h-auto m-auto flex items-center justify-center hover-grow hover:scale-105">
+        <div className="hidden md:flex card h-auto m-auto items-center justify-center hover-grow hover:scale-105">
           <Image
             className="rounded-xl"
             src={`https:${image}`}

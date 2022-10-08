@@ -3,8 +3,11 @@ import Image from 'next/image';
 
 const Skills = ({ skills }) => {
   return (
-    <section id="skills" className="w-full min-h-screen p-2">
-      <div className="max-w-[1240px] h-full mx-auto px-2 py-16 flex flex-col justify-center">
+    <section
+      id="skills"
+      className="w-full min-h-screen p-2 flex items-center justify-center"
+    >
+      <div className="w-full max-w-[1240px] px-2 py-16 flex flex-col justify-center">
         <span className="text-xl tracking-widest uppercase text--purple">
           Skills
         </span>
