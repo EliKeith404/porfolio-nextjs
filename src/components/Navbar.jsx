@@ -151,7 +151,7 @@ export default Navbar;
 // Nav Item Subcomponent
 const NavbarItem = ({ href, children, isMobile, callback }) => {
   return (
-    <li>
+    <li className="py-4 text-sm">
       {!isMobile ? (
         // Desktop
         <Link href={href}>
@@ -165,9 +165,7 @@ const NavbarItem = ({ href, children, isMobile, callback }) => {
         // Mobile
         <Link href={href}>
           <a>
-            <span className="py-4 text-sm" onClick={callback}>
-              {children}
-            </span>
+            <span onClick={callback}>{children}</span>
           </a>
         </Link>
       )}
