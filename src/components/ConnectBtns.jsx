@@ -14,9 +14,9 @@ const ConnectBtns = ({ size }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className={`btn-round hover-grow ${size}`}>
-              <span className="sr-only">LinkedIn Profile</span>
+            <div className={`btn-round hover-grow ${size} tooltip`}>
               <FaLinkedinIn />
+              <span className="tooltiptext">LinkedIn Profile</span>
             </div>
           </a>
         </li>
@@ -27,8 +27,8 @@ const ConnectBtns = ({ size }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className={`btn-round hover-grow ${size}`}>
-              <span className="sr-only">Github Profile</span>
+            <div className={`btn-round hover-grow ${size} tooltip`}>
+              <span className="tooltiptext">Github Profile</span>
               <FaGithub />
             </div>
           </a>
@@ -36,8 +36,8 @@ const ConnectBtns = ({ size }) => {
         {/* Email */}
         <li>
           <a href="mailto:ekbass44@gmail.com">
-            <div className={`btn-round hover-grow ${size}`}>
-              <span className="sr-only">Resume File</span>
+            <div className={`btn-round hover-grow ${size} tooltip`}>
+              <span className="tooltiptext">Email Me</span>
               <AiOutlineMail />
             </div>
           </a>
@@ -49,8 +49,8 @@ const ConnectBtns = ({ size }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className={`btn-round hover-grow ${size}`}>
-              <span className="sr-only">Email Me</span>
+            <div className={`btn-round hover-grow ${size} tooltip`}>
+              <span className="tooltiptext">My Resume</span>
               <BsFillPersonLinesFill />
             </div>
           </a>
