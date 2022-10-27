@@ -45,7 +45,7 @@ const ConnectBtns = ({ size }) => {
         {/* Resume */}
         <li>
           <a
-            href="https://docs.google.com/document/d/11b62J60S4DILgcgn7nVHUD6IMSvQy-PzACj6k7pIkBI/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1SN3fQY49E5_LGbCb3nNcdMuK4BUluVLHlotznADC_k0/edit?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
